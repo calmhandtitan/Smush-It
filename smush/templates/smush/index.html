@@ -1,0 +1,52 @@
+{% extends 'smush/base.html' %}
+
+{%  block body %}
+
+<div class="row">
+	<div class="col-sm-12 col-md-7">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form action="{% url 'smush:upload' %}" method="post" class="form-horizontal">
+					{% csrf_token %}
+					<div class="radio">
+						
+						<label>
+							<input type="radio" name="option_type" value=1>
+							Single URL
+						</label>	<br>	
+					</div>
+					
+					<div class="radio">
+						<label>
+							<input type="radio" name="option_type" value=2>
+							Text File containing list of URLs
+						</label>	<br>
+					</div>
+
+					<div class="radio">
+						
+						<label>
+							<input type="radio" name="option_type" value=3>
+							XLS/CSV file containing URLs
+						</label>	<br>
+					</div>
+
+					<div class="radio">
+						
+						<label>
+							<input type="radio" name="option_type" value=4>
+							Upload Image
+						</label>	<br>
+					</div>
+
+					<input type="submit" class="btn btn-success" value="Select">
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

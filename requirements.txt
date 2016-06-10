@@ -1,0 +1,5 @@
+Django==1.9.7
+python-magic>=0.4.11
+requests>=2.10.0
+Pillow>=2.0.0
+xlutils>=2.0.0

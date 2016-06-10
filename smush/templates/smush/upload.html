@@ -1,0 +1,25 @@
+{% extends 'smush/base.html' %}
+
+{%  block body %}
+	
+<form action="{% url 'smush:compress' %}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+	{% csrf_token %}
+
+	{% if option_type == "1" %}
+		<label class="control-label">Image URL</label>
+		<input type="url" name="image_url" >
+	{% endif %}	
+
+	{% if option_type != "1" %}
+		<p>{{ form.non_field_errors }}</p>
+            <p>{{ form.docfile.label }}</p>
+            <p>
+                {{ form.docfile }}
+            </p>
+	{% endif %}	
+
+	<br>
+	<input type="submit" class="btn btn-success"  value="Submit">
+</form>
+
+{% endblock %}

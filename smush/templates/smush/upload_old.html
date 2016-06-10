@@ -1,0 +1,33 @@
+{% extends 'smush/base.html' %}
+
+{%  block body %}
+	
+<form action="{% url 'smush:compress' %}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+	{% csrf_token %}
+
+	{% if option_type == "1" %}
+		<label class="control-label">Image URL</label>
+		<input type="url" name="image_url" >
+	{% endif %}	
+
+	{% if option_type == "2" %}
+		<label class="control-label">Select File</label>
+    	<input id="input-1" type="file" class="file" accept="text/plain">
+	{% endif %}	
+
+	{% if option_type == "3" %}
+		<label class="control-label">Select File</label>
+    	<input id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />  
+	{% endif %}	
+
+	{% if option_type == "4" %}
+		<label class="control-label">Select File</label>
+	    <input id="input-dim-1" name="inputdim1[]" type="file" class="file-loading" accept="image/*">
+	{% endif %}	
+
+
+	<br>
+	<input type="submit" class="btn btn-success"  value="Submit">
+</form>
+
+{% endblock %}
