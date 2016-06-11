@@ -1,5 +1,5 @@
 # Smush-It
-A django based webapp which takes url's to images, compresses the images and returns back url to the compressed image.
+A django based webapp which takes url's to images, compresses the images and returns back url to the compressed image. The app validates the url as image and compresses it to webp format so that there are no changes visible to the human eye in the compressed image with respect to the original image.
 
 ###Dependencies:
 
@@ -7,7 +7,7 @@ A django based webapp which takes url's to images, compresses the images and ret
 
 > $ sudo apt-get install webp
 
-And the remaining ones are listed in *requirements.txt*, to install them run
+And the remaining ones are listed in **requirements.txt**, to install them run
 
 > $  pip install -r requirements.txt
 
