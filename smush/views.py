@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Images, Document
 from .forms import DocumentForm
-import magic, os, uuid
+import os, uuid
 from CompressorFactory.FileProcessor import FileProcessor
 from CompressorFactory.ImageCompressor import ImageCompressor
 
