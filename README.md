@@ -3,9 +3,13 @@ A django based webapp which takes url's to images, compresses the images and ret
 
 ###Dependencies:
 
-**webp:** To install on Debian/Ubuntu, run
+**webp** To install on Debian/Ubuntu, run
 
 > $ sudo apt-get install webp
+
+**python-dev** To install on Debian/Ubuntu, run
+
+> $ sudo apt-get install python-dev
 
 And the remaining ones are listed in **requirements.txt**, to install them run
 
